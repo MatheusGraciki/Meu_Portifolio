@@ -1,0 +1,192 @@
+/* Reset básico */
+body, h1, h2, p, ul, li, a, form, input, textarea {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo geral */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+}
+
+/* Header */
+header {
+    background: #333;
+    color: #fff;
+    padding: 1em 0;
+    text-align: center;
+}
+
+header h1 {
+    margin-bottom: 0.5em;
+}
+
+/* Navegação */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 1em;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Main */
+main {
+    padding: 2em;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* Section de Contato */
+.contact-section {
+    background: #fff;
+    padding: 2em;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact-section h2 {
+    margin-bottom: 1em;
+    text-align: center;
+}
+
+/* Formulário */
+form {
+    background: #fff;
+    padding: 1.5em;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+form label {
+    display: block;
+    margin-bottom: 0.5em;
+    font-weight: bold;
+}
+
+form input, form textarea {
+    width: calc(100% - 1em); /* Ajuste para o padding */
+    padding: 0.5em;
+    margin-bottom: 1em;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+form textarea {
+    resize: vertical; /* Permite redimensionar apenas verticalmente */
+}
+
+form button {
+    padding: 0.7em;
+    border: none;
+    background: #333;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 3px;
+    font-size: 16px;
+}
+
+form button:hover {
+    background: #555;
+}
+
+/* LinkedIn Button */
+.linkedin-button {
+    text-align: center;
+    margin-top: 2em;
+}
+
+.linkedin-button a {
+    display: inline-flex;
+    align-items: center;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #ffffff;
+    background-color: #0077b5;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.linkedin-button a:hover {
+    background-color: #005582;
+    transform: scale(1.05); /* Pequeno aumento no botão ao passar o mouse */
+}
+
+.linkedin-button i {
+    margin-right: 8px; /* Espaço entre o ícone e o texto */
+}
+
+/* Footer */
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1em 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+/* Estilo das Cartas */
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.card {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    overflow: hidden;
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    background-color: #f0f0f0;
+    cursor: pointer;
+}
+
+.card img,
+.card video {
+    width: 100%;
+    height: auto;
+}
+
+.card-title {
+    font-size: 1.2em;
+    margin: 0;
+    padding: 15px;
+    background-color: #f4f4f4;
+    text-align: center;
+    transition: background-color 0.3s;
+}
+
+.card:hover .card-title {
+    background-color: #e0e0e0;
+}
+
+.card a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
