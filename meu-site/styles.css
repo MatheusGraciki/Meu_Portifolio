@@ -81,7 +81,7 @@ form label {
 }
 
 form input, form textarea {
-    width: calc(100% - 1em); /* Ajuste para o padding */
+    width: calc(100% - 1em);
     padding: 0.5em;
     margin-bottom: 1em;
     border: 1px solid #ccc;
@@ -89,7 +89,7 @@ form input, form textarea {
 }
 
 form textarea {
-    resize: vertical; /* Permite redimensionar apenas verticalmente */
+    resize: vertical;
 }
 
 form button {
@@ -126,11 +126,11 @@ form button:hover {
 
 .linkedin-button a:hover {
     background-color: #005582;
-    transform: scale(1.05); /* Pequeno aumento no botão ao passar o mouse */
+    transform: scale(1.05);
 }
 
 .linkedin-button i {
-    margin-right: 8px; /* Espaço entre o ícone e o texto */
+    margin-right: 8px;
 }
 
 /* Footer */
@@ -144,47 +144,60 @@ footer {
     bottom: 0;
 }
 
-/* Estilo das Cartas */
+/* Container dos cards */
 .card-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    padding: 20px 0;
 }
 
+/* Card base */
 .card {
-    border: 1px solid #ccc;
-    border-radius: 10px;
+    background: #ffffff;
+    border-radius: 15px;
     overflow: hidden;
-    width: 300px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s, background-color 0.3s;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer; /* cursor de mãozinha */
 }
 
+/* Efeito hover */
 .card:hover {
-    transform: scale(1.05);
-    background-color: #f0f0f0;
-    cursor: pointer;
+    transform: translateY(-6px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
 }
 
 .card img,
 .card video {
     width: 100%;
-    height: auto;
+    height: 200px;
+    object-fit: contain;
+    background-color: #f4f4f4; 
+    border-bottom: 1px solid #f0f0f0;
+    cursor: pointer; 
 }
 
+/* Título */
 .card-title {
     font-size: 1.2em;
-    margin: 0;
+    font-weight: bold;
     padding: 15px;
-    background-color: #f4f4f4;
     text-align: center;
-    transition: background-color 0.3s;
+    background: #fafafa;
+    color: #333;
+    border-top: 1px solid #f0f0f0;
+    transition: background 0.3s ease, color 0.3s ease;
 }
 
 .card:hover .card-title {
-    background-color: #e0e0e0;
+    background: #f0f0f0;
+    color: #000;
 }
 
+/* Link */
 .card a {
     text-decoration: none;
     color: inherit;
